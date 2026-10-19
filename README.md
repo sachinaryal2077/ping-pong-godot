@@ -8,14 +8,14 @@ Ping pong game created using Godot 4 game engine.
 - Custom sounds effects
 - Full controls customization with persistant storage
 
-# Main Menu
+## Main Menu
 
 ![Main menu](/demos/main_menu.png)
 
-# Main Game
+## Main Game
 
 ![Ping pong game demo](/demos/game.png)
 
-# Controls customization
+## Controls customization
 
 ![Controls customization](/demos/controls_customization.png)
