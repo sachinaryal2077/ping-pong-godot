@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://mqcp8x2xw7q2"]
+
+[ext_resource type="PackedScene" uid="uid://cnvky4qhgonk6" path="res://components/custom_button.tscn" id="1_n87rw"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1598504881]
+process_mode = 3
+
+[node name="Background" type="ColorRect" parent="." unique_id=726325781]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0627451, 0.09411765, 0.15294118, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1538945128]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer" unique_id=2079349934]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer/MarginContainer" unique_id=1066312720]
+layout_mode = 2
+
+[node name="PauseMenuButtons" type="VBoxContainer" parent="CenterContainer/MarginContainer/PanelContainer" unique_id=1706016691]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PauseMenuButtonsLabel" type="Label" parent="CenterContainer/MarginContainer/PanelContainer/PauseMenuButtons" unique_id=1436585105]
+custom_maximum_size = Vector2(360, -1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9882353, 0.7490196, 0.28627452, 1)
+theme_override_font_sizes/font_size = 24
+text = "GAME IS PAUSED"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ResumeButton" parent="CenterContainer/MarginContainer/PanelContainer/PauseMenuButtons" unique_id=1681735196 instance=ExtResource("1_n87rw")]
+layout_mode = 2
+text = "RESUME"
+
+[node name="GuideButton" parent="CenterContainer/MarginContainer/PanelContainer/PauseMenuButtons" unique_id=1486159885 instance=ExtResource("1_n87rw")]
+layout_mode = 2
+text = "HOW TO PLAY ?"
+
+[node name="ControlsButton" parent="CenterContainer/MarginContainer/PanelContainer/PauseMenuButtons" unique_id=1541452601 instance=ExtResource("1_n87rw")]
+layout_mode = 2
+text = "CONTROLS"
+
+[node name="QuitToMenuButton" parent="CenterContainer/MarginContainer/PanelContainer/PauseMenuButtons" unique_id=151902963 instance=ExtResource("1_n87rw")]
+layout_mode = 2
+text = "QUIT TO MENU"
+
+[node name="QuitToDesktopButton" parent="CenterContainer/MarginContainer/PanelContainer/PauseMenuButtons" unique_id=1713856320 instance=ExtResource("1_n87rw")]
+layout_mode = 2
+text = "QUIT TO DESKTOP"

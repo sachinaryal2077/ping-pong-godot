@@ -1,0 +1,190 @@
+[gd_scene format=3 uid="uid://dycxeh4nviaiy"]
+
+[ext_resource type="Script" uid="uid://lfmbcfnwcvq7" path="res://scripts/guide.gd" id="1_0el4p"]
+[ext_resource type="PackedScene" uid="uid://cnvky4qhgonk6" path="res://components/custom_button.tscn" id="1_or254"]
+
+[node name="Guide" type="Control" unique_id=765161951]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0el4p")
+
+[node name="Background" type="ColorRect" parent="." unique_id=749055340]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.047058824, 0.09411765, 0.12941177, 1)
+
+[node name="GuideLayout" type="CenterContainer" parent="." unique_id=1205984444]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GuideItems" type="VBoxContainer" parent="GuideLayout" unique_id=1384955909]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="GuideItemTitle" type="Label" parent="GuideLayout/GuideItems" unique_id=495659491]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9882353, 0.7490196, 0.28627452, 1)
+theme_override_font_sizes/font_size = 48
+text = "HOW TO PLAY ?"
+horizontal_alignment = 1
+
+[node name="Guides" type="VBoxContainer" parent="GuideLayout/GuideItems" unique_id=601876281]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="GuideItem" type="HBoxContainer" parent="GuideLayout/GuideItems/Guides" unique_id=1826353931]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="ColorRect" type="ColorRect" parent="GuideLayout/GuideItems/Guides/GuideItem" unique_id=322955462]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+color = Color(0.9882353, 0.7490196, 0.28627452, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="GuideLayout/GuideItems/Guides/GuideItem/ColorRect" unique_id=826640476]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GuideItemCount" type="Label" parent="GuideLayout/GuideItems/Guides/GuideItem/ColorRect/CenterContainer" unique_id=623012528]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "01"
+
+[node name="GuideItemContent" type="Label" parent="GuideLayout/GuideItems/Guides/GuideItem" unique_id=1867045425]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Hit the ball back across the table with your paddle."
+
+[node name="GuideItem2" type="HBoxContainer" parent="GuideLayout/GuideItems/Guides" unique_id=529608400]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="ColorRect" type="ColorRect" parent="GuideLayout/GuideItems/Guides/GuideItem2" unique_id=872930740]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+color = Color(0.9882353, 0.7490196, 0.28627452, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="GuideLayout/GuideItems/Guides/GuideItem2/ColorRect" unique_id=733207920]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GuideItemCount" type="Label" parent="GuideLayout/GuideItems/Guides/GuideItem2/ColorRect/CenterContainer" unique_id=2132115509]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "02"
+
+[node name="GuideItemContent" type="Label" parent="GuideLayout/GuideItems/Guides/GuideItem2" unique_id=1999760632]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "If the ball passes your paddle, your opponent scores a point."
+
+[node name="GuideItem3" type="HBoxContainer" parent="GuideLayout/GuideItems/Guides" unique_id=1744529700]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="ColorRect" type="ColorRect" parent="GuideLayout/GuideItems/Guides/GuideItem3" unique_id=1691035069]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+color = Color(0.9882353, 0.7490196, 0.28627452, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="GuideLayout/GuideItems/Guides/GuideItem3/ColorRect" unique_id=1621665690]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GuideItemCount" type="Label" parent="GuideLayout/GuideItems/Guides/GuideItem3/ColorRect/CenterContainer" unique_id=54037242]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "03"
+
+[node name="GuideItemContent" type="Label" parent="GuideLayout/GuideItems/Guides/GuideItem3" unique_id=1741454876]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "First player to reach 7 points wins the match."
+
+[node name="GuideItem4" type="HBoxContainer" parent="GuideLayout/GuideItems/Guides" unique_id=1896134728]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="ColorRect" type="ColorRect" parent="GuideLayout/GuideItems/Guides/GuideItem4" unique_id=1799509040]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+color = Color(0.9882353, 0.7490196, 0.28627452, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="GuideLayout/GuideItems/Guides/GuideItem4/ColorRect" unique_id=872060419]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GuideItemCount" type="Label" parent="GuideLayout/GuideItems/Guides/GuideItem4/ColorRect/CenterContainer" unique_id=390268722]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "04"
+
+[node name="GuideItemContent" type="Label" parent="GuideLayout/GuideItems/Guides/GuideItem4" unique_id=332121340]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "The ball speeds up with every hit and resets after each point."
+
+[node name="GuideItem5" type="HBoxContainer" parent="GuideLayout/GuideItems/Guides" unique_id=1529852759]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="ColorRect" type="ColorRect" parent="GuideLayout/GuideItems/Guides/GuideItem5" unique_id=1971277252]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+color = Color(0.9882353, 0.7490196, 0.28627452, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="GuideLayout/GuideItems/Guides/GuideItem5/ColorRect" unique_id=984093213]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GuideItemCount" type="Label" parent="GuideLayout/GuideItems/Guides/GuideItem5/ColorRect/CenterContainer" unique_id=574170503]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "05"
+
+[node name="GuideItemContent" type="Label" parent="GuideLayout/GuideItems/Guides/GuideItem5" unique_id=757672354]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Hit with the edge of your paddle to send the ball at a sharper angle."
+
+[node name="ReturnToMenuButton" parent="GuideLayout/GuideItems" unique_id=1681735196 instance=ExtResource("1_or254")]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "RETURN TO MENU"

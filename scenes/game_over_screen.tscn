@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://3b6smn27jtc3"]
+
+[ext_resource type="Script" uid="uid://iov77kj70yif" path="res://scripts/game_over_screen.gd" id="1_61w2s"]
+[ext_resource type="PackedScene" uid="uid://cnvky4qhgonk6" path="res://components/custom_button.tscn" id="1_iwahs"]
+
+[node name="GameOverScreen" type="CanvasLayer" unique_id=1195810514]
+script = ExtResource("1_61w2s")
+
+[node name="GameOverMenu" type="Control" parent="." unique_id=16852917]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="GameOverMenu" unique_id=1485561082]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.047058824, 0.09411765, 0.12941177, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="GameOverMenu" unique_id=1717358800]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverMenu/CenterContainer" unique_id=1851199479]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="WinnerName" type="Label" parent="GameOverMenu/CenterContainer/VBoxContainer" unique_id=459035145]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "WINNER NAME HERE"
+
+[node name="FinalScore" type="Label" parent="GameOverMenu/CenterContainer/VBoxContainer" unique_id=1787456894]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "FINAL SCORE HERE"
+horizontal_alignment = 1
+
+[node name="RestartGameButton" parent="GameOverMenu/CenterContainer/VBoxContainer" unique_id=1681735196 instance=ExtResource("1_iwahs")]
+layout_mode = 2
+text = "RESTART GAME"
+
+[node name="QuitToMenuButton" parent="GameOverMenu/CenterContainer/VBoxContainer" unique_id=299763220 instance=ExtResource("1_iwahs")]
+layout_mode = 2
+text = "QUIT TO MENU"
+
+[node name="QuitGameButton" parent="GameOverMenu/CenterContainer/VBoxContainer" unique_id=831454048 instance=ExtResource("1_iwahs")]
+layout_mode = 2
+text = "QUIT GAME"

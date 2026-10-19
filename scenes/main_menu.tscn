@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://ceq6gehhqyaar"]
+
+[ext_resource type="Script" uid="uid://gqwgh6rqsaib" path="res://scripts/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="PackedScene" uid="uid://cnvky4qhgonk6" path="res://components/custom_button.tscn" id="1_l6cm7"]
+
+[node name="MainMenu" type="Control" unique_id=1032482843]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekxnf")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1221752631]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.047058824, 0.09411765, 0.12941177, 1)
+
+[node name="MenuCenter" type="CenterContainer" parent="." unique_id=1761631264]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuLayout" type="VBoxContainer" parent="MenuCenter" unique_id=1277240784]
+layout_mode = 2
+theme_override_constants/separation = 36
+alignment = 1
+
+[node name="MenuTitle" type="Label" parent="MenuCenter/MenuLayout" unique_id=377675454]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9882353, 0.7490196, 0.28627452, 1)
+theme_override_font_sizes/font_size = 46
+text = "PING PONG GAME"
+
+[node name="MenuButtons" type="VBoxContainer" parent="MenuCenter/MenuLayout" unique_id=63112236]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="StartGameButton" parent="MenuCenter/MenuLayout/MenuButtons" unique_id=1681735196 instance=ExtResource("1_l6cm7")]
+layout_mode = 2
+text = "START GAME"
+
+[node name="GuideButton" parent="MenuCenter/MenuLayout/MenuButtons" unique_id=1103358932 instance=ExtResource("1_l6cm7")]
+layout_mode = 2
+text = "HOW TO PLAY ?"
+
+[node name="ControlsButton" parent="MenuCenter/MenuLayout/MenuButtons" unique_id=334139111 instance=ExtResource("1_l6cm7")]
+layout_mode = 2
+text = "CONTROLS"
+
+[node name="ExitGameButton" parent="MenuCenter/MenuLayout/MenuButtons" unique_id=494480894 instance=ExtResource("1_l6cm7")]
+layout_mode = 2
+text = "EXIT GAME"

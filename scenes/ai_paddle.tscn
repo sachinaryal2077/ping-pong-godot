@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b2e6umgjj15fi"]
+
+[ext_resource type="Script" uid="uid://bggjrdga8pdku" path="res://scripts/ai_paddle.gd" id="1_vuc7a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gkte"]
+size = Vector2(20, 120)
+
+[sub_resource type="QuadMesh" id="QuadMesh_y15vf"]
+size = Vector2(20, 120)
+
+[node name="AIPaddle" type="CharacterBody2D" unique_id=213340615]
+script = ExtResource("1_vuc7a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1589015556]
+shape = SubResource("RectangleShape2D_7gkte")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1194690519]
+mesh = SubResource("QuadMesh_y15vf")

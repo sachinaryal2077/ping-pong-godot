@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://borcbsbttdcrw"]
+
+[ext_resource type="Script" uid="uid://ckhw6lvtutlaq" path="res://scripts/remap_input_button.gd" id="1_aj7ld"]
+
+[node name="Button" type="Button" unique_id=1281104594]
+custom_minimum_size = Vector2(320, 60)
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_aj7ld")

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cnvky4qhgonk6"]
+
+[ext_resource type="Script" uid="uid://dafrytvheu8gv" path="res://scripts/custom_button.gd" id="1_gwu8x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwu8x"]
+bg_color = Color(0.105882354, 0.16470589, 0.25490198, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5805"]
+bg_color = Color(0.19607843, 0.2901961, 0.37254903, 1)
+
+[node name="CustomButton" type="Button" unique_id=1681735196]
+custom_minimum_size = Vector2(320, 60)
+offset_left = 517.0
+offset_top = 268.0
+offset_right = 757.0
+offset_bottom = 328.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_gwu8x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_p5805")
+text = "CUSTOM BUTTON"
+script = ExtResource("1_gwu8x")

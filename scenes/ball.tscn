@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://b24wahxntr6o2"]
+
+[ext_resource type="Script" uid="uid://b1h8gadxoy2pd" path="res://scripts/ball.gd" id="1_7s4qf"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_n1dj2"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jo5cq"]
+size = Vector2(16, 16)
+
+[sub_resource type="QuadMesh" id="QuadMesh_n1dj2"]
+size = Vector2(16, 16)
+
+[node name="Ball" type="RigidBody2D" unique_id=787571035]
+physics_material_override = SubResource("PhysicsMaterial_n1dj2")
+gravity_scale = 0.0
+can_sleep = false
+lock_rotation = true
+linear_damp_mode = 1
+angular_damp_mode = 1
+script = ExtResource("1_7s4qf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1526717348]
+shape = SubResource("RectangleShape2D_jo5cq")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=2123300422]
+mesh = SubResource("QuadMesh_n1dj2")

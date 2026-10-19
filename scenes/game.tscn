@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://dqrk3vfagob5f"]
+
+[ext_resource type="PackedScene" uid="uid://mqcp8x2xw7q2" path="res://scenes/pause_menu.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://cp6u6efpqfg4q" path="res://scripts/game.gd" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://b5tacieo4svh6" path="res://scenes/player_paddle.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://b2e6umgjj15fi" path="res://scenes/ai_paddle.tscn" id="3_iywne"]
+[ext_resource type="PackedScene" uid="uid://b24wahxntr6o2" path="res://scenes/ball.tscn" id="3_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://3b6smn27jtc3" path="res://scenes/game_over_screen.tscn" id="6_p57ef"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jo5cq"]
+size = Vector2(1280, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y15vf"]
+size = Vector2(20, 720)
+
+[node name="Game" type="Control" unique_id=1448828717]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqjtg")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1731815971]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.07058824, 0.09803922, 1)
+
+[node name="TopWallVisual" type="ColorRect" parent="." unique_id=1497761828]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 20.0
+color = Color(0, 0, 0, 1)
+
+[node name="BottomWallVisual" type="ColorRect" parent="." unique_id=1501638412]
+layout_mode = 0
+offset_top = 700.0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="PlayerScoreLabel" type="Label" parent="." unique_id=970039055]
+layout_mode = 0
+offset_left = 425.0
+offset_top = 25.0
+offset_right = 540.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.9882353, 0.7490196, 0.28627452, 1)
+theme_override_font_sizes/font_size = 24
+text = "PLAYER 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AIScoreLabel" type="Label" parent="." unique_id=679913039]
+layout_mode = 0
+offset_left = 850.0
+offset_top = 25.0
+offset_right = 965.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.93096477, 0.4013033, 0.47475445, 1)
+theme_override_font_sizes/font_size = 24
+text = "AI 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Court" type="Node2D" parent="." unique_id=1822907093]
+
+[node name="TopWall" type="StaticBody2D" parent="Court" unique_id=403439879]
+position = Vector2(640, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Court/TopWall" unique_id=585082714]
+shape = SubResource("RectangleShape2D_jo5cq")
+
+[node name="BottomWall" type="StaticBody2D" parent="Court" unique_id=1770912694]
+position = Vector2(640, 710)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Court/BottomWall" unique_id=815595898]
+shape = SubResource("RectangleShape2D_jo5cq")
+
+[node name="PlayerPaddle" parent="Court" unique_id=1907932867 instance=ExtResource("2_lnu2h")]
+position = Vector2(30, 360)
+
+[node name="AIPaddle" parent="Court" unique_id=213340615 instance=ExtResource("3_iywne")]
+position = Vector2(1250, 360)
+
+[node name="Ball" parent="Court" unique_id=787571035 instance=ExtResource("3_lbhrr")]
+position = Vector2(640, 360)
+
+[node name="LeftGoal" type="Area2D" parent="Court" unique_id=198532575]
+position = Vector2(0, 360)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Court/LeftGoal" unique_id=325381795]
+shape = SubResource("RectangleShape2D_y15vf")
+
+[node name="RightGoal" type="Area2D" parent="Court" unique_id=1704143162]
+position = Vector2(1280, 360)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Court/RightGoal" unique_id=1273554383]
+shape = SubResource("RectangleShape2D_y15vf")
+
+[node name="PauseMenu" parent="." unique_id=1598504881 instance=ExtResource("1_uwrxv")]
+visible = false
+
+[node name="GameOverScreen" parent="." unique_id=1195810514 instance=ExtResource("6_p57ef")]
+process_mode = 3

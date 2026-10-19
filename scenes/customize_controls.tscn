@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://in7ysc6y71im"]
+
+[ext_resource type="PackedScene" uid="uid://cnvky4qhgonk6" path="res://components/custom_button.tscn" id="1_56kuu"]
+[ext_resource type="Script" uid="uid://dt6nltmcy7sw3" path="res://scripts/customize_controls.gd" id="1_hyc7o"]
+[ext_resource type="PackedScene" uid="uid://borcbsbttdcrw" path="res://components/remap_input_button.tscn" id="2_pi7uf"]
+
+[node name="CustomizeControls" type="Control" unique_id=1687616091]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hyc7o")
+
+[node name="Background" type="ColorRect" parent="." unique_id=697699626]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.047058824, 0.09411765, 0.12941177, 1)
+
+[node name="CustomizeControlsCentered" type="CenterContainer" parent="." unique_id=687800348]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CustomizeControlsVBox" type="VBoxContainer" parent="CustomizeControlsCentered" unique_id=861971591]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="CustomizeControlsTitle" type="Label" parent="CustomizeControlsCentered/CustomizeControlsVBox" unique_id=1699703714]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9882353, 0.7490196, 0.28627452, 1)
+theme_override_font_sizes/font_size = 24
+text = "CUSTOMIZE YOUR CONTROLS"
+
+[node name="CustomControlsItemsVBox" type="VBoxContainer" parent="CustomizeControlsCentered/CustomizeControlsVBox" unique_id=1247518737]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="RemapMoveUpInputButton" parent="CustomizeControlsCentered/CustomizeControlsVBox/CustomControlsItemsVBox" unique_id=1281104594 instance=ExtResource("2_pi7uf")]
+layout_mode = 2
+display_text = "Move UP"
+
+[node name="RemapMoveDownInputButton2" parent="CustomizeControlsCentered/CustomizeControlsVBox/CustomControlsItemsVBox" unique_id=520161116 instance=ExtResource("2_pi7uf")]
+layout_mode = 2
+action = &"paddle_down"
+display_text = "Move Down"
+
+[node name="RemapInputGuide" type="Label" parent="CustomizeControlsCentered/CustomizeControlsVBox/CustomControlsItemsVBox" unique_id=1576846923]
+custom_maximum_size = Vector2(320, -1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9882353, 0.7490196, 0.28627452, 1)
+theme_override_font_sizes/font_size = 20
+text = "Press any input to remap it to a different button"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3
+
+[node name="ReturnToMenuButton" parent="CustomizeControlsCentered/CustomizeControlsVBox" unique_id=1681735196 instance=ExtResource("1_56kuu")]
+layout_mode = 2
+text = "RETURN TO MENU"
